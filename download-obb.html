@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#d39d08,#1f1f1e);
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: rgb(31, 32, 32);
+    }
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      background:linear-gradient(270deg,#5e5c5b,#252324); 
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #0077cc;
+    }
+    .instructions {
+      margin-top: 30px;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+  <h1 id="gameTitle">Loading Game...</h1>
+  <img id="gameImage" src="" alt="Game Cover">
+
+  <div>
+    <a id="apkButton" class="button" href="#">Download APK</a>
+    <a id="obbButton" class="button" href="#">Download OBB</a>
+  </div>
+
+  <div class="instructions">
+    <h2>How to Install:</h2>
+    <ol>
+      <li>Download and install the APK file first.</li>
+      <li>Download the OBB file.</li>
+      <li>Move the OBB file to: <strong>Android/obb/[game-folder-name]</strong></li>
+      <li>If the "obb" folder doesn't exist, create it manually.</li>
+      <li>Now open the game and enjoy!</li>
+    </ol>
+  </div>
+
+  <script>
+    // Define all game links
+    const games = {
+      "bully": {
+        "apk": "https://example.com/gta.apk",
+        "obb": "https://example.com/gta.obb.zip"
+      },
+
+
+      "gameloft spider 2": {
+        "apk": "https://mega.nz/file/3VJjhZqZ#Od0ytGurTLnA0mqv70ruNLTyT2DwN02a0W9MuHFRtjc. ",
+        "obb": "https://mega.nz/file/DMJyWJYR#zEyOTk15OuJwiTmo-5-tjSERDogLE7HV95rloP1oHWU"
+      },
+
+
+      
+      "sacred odyssey": {
+        "apk": "https://mega.nz/file/DA4gCapL#qt4PJwAzSX43XbfNEHebUusQKpfLwv3TEhzSxJj_pI0",
+        "obb": "https://mega.nz/file/idoSHbYB#-lOplOADcD_NOrFqpNZuDmEdBSqWH0D8ADs6KqqIdhI"
+      },
+
+
+
+      
+      "need for speed most wanted": {
+        "apk": "https://mega.nz/file/bdp0UbBQ#YbDNsfNl_AxvVE5pyIDvU8ARPudtLzsSSwX8K88-vwg. ",
+        "obb": "https://mega.nz/file/WZZ3kRJB#AlxNwl3A8DYwSYvhRWQNc4-"
+      },
+
+      
+      "wild blood": {
+        "apk": "https://mega.nz/file/GRAQBQxY#Rx251LSRI3ntjSqBpR2KVpY0PokbkZnpkFajUGI5Bxo",
+        "obb": " https://mega.nz/file/HUxmgZSD#kLZzeSYmsZyDg73NQedUKaWQV8tT0rpPoNU7IKBm2Zc. "
+      },
+
+      
+      "modern combat 4": {
+        "apk": "https://mega.nz/file/mFICXY6L#YOaHuoKZcCuxSZF27AlnXXPLYs0vyKTlMFwqLt2X3N0 ",
+        "obb": "https://mega.nz/file/nEpDSbqS#AisVzR5AByWNkYRAGbx-xX4RFA1Jl0a30wlmtkkAdos"
+      },
+
+      
+      "dead effect 2": {
+        "apk": "https://www.mediafire.com/file/fclx7jxo7favktk/Dead-Effect-2-v220322.2470-mod-platinmods.apk/file?dkey=sr5wq80iet4&r=1290.",
+        "obb": "https://www.mediafire.com/file/4i4jflubzsnyngg/com.badflyinteractive.deadeffect2.zip/file?dkey=z7yves1ybld&r=1234"
+      },
+
+      
+      "gta san andreas": {
+        "apk": "https://www.mediafire.com/file/pyswwhyull0vxhn/com.rockstargames.gtasa.rar/file     ",
+        "obb": "https://www.mediafire.com/file/4r3ziird7kpwxxk/GTA_SA_APK_2.10_PT_BR%252C_By_Ryuzaki_gamer.zip/file"
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+      
+      "": {
+        "apk": "",
+        "obb": ""
+      },
+
+
+
+      "gta san andreas": {
+        "apk": "https://example.com/minecraft.apk",
+        "obb": "https://example.com/minecraft.obb.zip"
+      }
+      // Add more games here...
+    };
+
+    // Get game name from URL
+    const params = new URLSearchParams(window.location.search);
+    const gameName = params.get('game') || 'Unknown Game';
+
+    // Check if game exists in the games object
+    if (games[gameName]) {
+      // Set game name
+      document.getElementById('gameTitle').textContent = gameName;
+      
+      // Dynamically set image based on the game name (supports JPG, PNG, GIF, etc.)
+      const imageUrl = `game_images/${gameName}-cover`;
+      const extensions = ['.jpg', '.png', '.gif', '.jpeg', '.webp'];
+      let imageFound = false;
+
+      // Try all image extensions until a valid image is found
+      for (const ext of extensions) {
+        const fullImageUrl = `${imageUrl}${ext}`;
+        const img = new Image();
+        img.src = fullImageUrl;
+        img.onload = function() {
+          document.getElementById('gameImage').src = fullImageUrl;
+          imageFound = true;
+        }
+        img.onerror = function() {
+          if (!imageFound) {
+            document.getElementById('gameImage').style.display = 'none'; // Hide image if none is found
+          }
+        }
+      }
+
+      // Set download links for APK and OBB
+      document.getElementById('apkButton').href = games[gameName].apk;
+      document.getElementById('obbButton').href = games[gameName].obb;
+    } else {
+      document.getElementById('gameTitle').textContent = 'Game not found';
+      document.getElementById('gameImage').style.display = 'none'; // Hide image if game is not found
+      document.getElementById('apkButton').style.display = 'none'; // Hide APK button
+      document.getElementById('obbButton').style.display = 'none'; // Hide OBB button
+    }
+  </script>
+</body>
+</html>

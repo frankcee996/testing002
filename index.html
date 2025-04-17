@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEEGAMES</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><footer class="footer"></footer>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="C_20250330_020734_0000.png" alt="CEEGAMES Logo" class="logo">
+            <h1>CEEGAMES</h1>
+            <h2>Access to the game world</h2>
+        </div>
+    </header>
+
+         <nav>
+    <ul>
+        <li><a href="game.html">games </a></li>
+        
+    </ul>
+</nav>
+
+
+
+
+<div id="search-box">
+    <svg id="search-toggle" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 
+      1.398h-.001l3.85 3.85a1 1 0 0 0 
+      1.415-1.415l-3.85-3.85zm-5.242.656a5 
+      5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+    </svg>
+    <input type="text" id="search-input" placeholder="Search..." />
+  </div>
+      
+  <div class="carousel-container">
+    <h2 class="carousel-title">popular Games</h2>
+    <button class="carousel-btn prev">&#10094;</button>
+    <div class="carousel-track" id="carousel-track">
+      <a href="download.html?game=assassins-creed-bloodlines"><img src="game_images/assassins-creed-bloodlines-cover.webp" alt="Assassins Creed"></a>
+      <a href="download.html?game=bully"><img src="game_images/bully-cover.png" alt="bully"></a>
+      <a href="download.html?game=fifa-14-world-class-soccer"><img src="game_images/fifa-14-world-class-soccer-cover.webp" alt="fifa 14"></a>
+      <a href="download.html?game=free fire"><img src="game_images/free fire-cover.png" alt="free fire"></a>
+      <a href="download.html?game=god-of-war-chains-of-olympus-psp"><img src="game_images/god-of-war-chains-of-olympus-psp-cover.webp" alt="Avatar"></a>
+      <a href="download.html?game=batman telltale"><img src="game_images/batman telltale-cover.png" alt="batman telltale"></a>
+      <!-- Add more images here -->
+    </div>
+    <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </div>
+
+
+
+  <h2>featured games</h2>
+  <div class="game-section">
+ <div class="game-card">
+
+        <a href="download.html?game=assassins-creed-bloodlines" title="assassins-creed-bloodlines">
+            <img src="game_images/assassins-creed-bloodlines-cover.webp" alt="assassins-creed-bloodlines PSP ">
+        </a>
+        <p><h3>Assasasins-creed-bloodlines</h3></p>
+        <meta name="keywords" content="God of War PSP, God of War ISO, PSP games, free PSP downloads">
+    </div>
+
+
+    
+    <div class="game-card">
+        <a href="download.html?game=fifa-13" title="assassins-creed-bloodlines">
+            <img src="game_images/fifa-13-cover.webp" alt="fifa-13 PSP ">
+        </a>
+        <p><h3>fifa-13</h3></p>
+        <meta name="keywords" content="God of War PSP, God of War ISO, PSP games, free PSP downloads">
+    </div>
+
+
+
+    <section class="spotlight-section">
+        <h2>Game Spotlight</h2>
+        <div class="spotlight-box" id="spotlightBox">
+          <!-- Spotlight content will be injected here -->
+        </div>
+      </section>
+
+
+    <div class="game-card">
+        <a href="download.html?game=ben-10-alien-force-vilgax-attacks" title="ben-10-alien-force-vilgax-attacks">
+            <img src="game_images/ben-10-alien-force-vilgax-attacks-cover.webp" alt="ben-10-alien-force-vilgax-attacks PSP ">
+        </a>
+        <p><h3>ben-10-alien-force-vilgax-attacks</h3></p>
+        <meta name="keywords" content="God of War PSP, God of War ISO, PSP games, free PSP downloads">
+    </div>
+
+     <div class="game-card">
+        <a href="download.html?game=spider-man-3" title="spider-man-3">
+            <img src="game_images/spider-man-3-cover.webp" alt="spider-man-3 PSP ">
+        </a>
+        <p><h3>spider-man-3</h3></p>
+        <meta name="keywords" content="God of War PSP, God of War ISO, PSP games, free PSP downloads">
+    </div>
+
+
+    </div>
+
+
+        <!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="game.html"> games</a></li>
+        <li><a href="contact.html">contact </a></li>
+        <li><a href="about.html"> about  </a></li>
+    </ul>
+</div>
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+
+
+<script src="cee.js"></script>
+</body>
+
+
+
+<script>
+    document.querySelectorAll(".game-card h3"). forEach(h3 => {
+      h3. textContent= 
+      h3.textContent.replace(/-/g, " ");
+    });
+    </script>
+
+
+
+<div class="latest-posts-box">
+  <h2>Latest Posts</h2>
+  <div id="blog-posts-grid"></div>
+</div>
+
+<style>
+  .latest-posts-box {
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  .latest-posts-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .blog-card {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .blog-card img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+  }
+
+  .blog-card-content {
+    padding: 15px;
+    flex: 1;
+  }
+
+  .blog-card-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .blog-card-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .rating {
+    color: #ffa500;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .download-btn:hover {
+    background-color: #218838;
+  }
+</style>
+
+<script>
+  const grid = document.getElementById("blog-posts-grid");
+  const timestamp = new Date().getTime();
+
+  fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://mywebsitecee.blogspot.com/feeds/posts/default?alt=rss&nocache=${timestamp}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.items && data.items.length > 0) {
+        data.items.slice(0, 10).forEach(post => {
+          // Short description preview
+          let description = post.content.split("</p>")[0] + "</p>";
+          description = description.replace(/<img[^>]*>/g, ""); // remove any image inside content
+          description = description.replace(/<[^>]+>/g, ""); // remove any remaining HTML tags
+
+          const card = document.createElement("div");
+          card.className = "blog-card";
+
+          card.innerHTML = `
+            <img src="${post.thumbnail || 'https://via.placeholder.com/120'}" alt="Post Image" loading="lazy">
+            <div class="blog-card-content">
+              <h3>${post.title}</h3>
+              <div class="rating">★★★★☆ <span style="color:#555; font-size:12px;">(4.0/5)</span></div>
+              <p>${description}</p>
+              <a class="download-btn" href="${post.link}" target="_blank">Download Now</a>
+            </div>
+          `;
+
+          grid.appendChild(card);
+        });
+      } else {
+        grid.innerHTML = "<p>No posts available.</p>";
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching posts:", error);
+      grid.innerHTML = "<p>Failed to load posts.</p>";
+    });
+</script>
+
+
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+   
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="download.png" alt="telegram">
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+      <img src="download.png" alt="telegram">
+    </a>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 CEEGAMES. All rights reserved.</p>
+    <p><a href="terms,privacy.html">Terms</a> | <a href="terms,privacy.html">Privacy</a></p>
+  </div>
+</footer>
